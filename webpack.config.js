@@ -1,5 +1,7 @@
 const path = require('path');
 const uglify = require('uglifyjs-webpack-plugin');
+const htmlPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: {
         entry: './src/entry.js',
@@ -27,11 +29,19 @@ module.exports = {
                      presets: ['es2015']
                   }
                 }],
+                exclude: /node_modules/
             }
         ]
     },
     plugins: [
-        new uglify()
+        new uglify(),
+        new htmlPlugin({
+            minify: {
+                removeAttributeQuotes: true   //去掉引号
+            },
+            hash: true, //生成hash值
+            template: './src/index.html'   // 以这个html为模板
+        })
     ],
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
