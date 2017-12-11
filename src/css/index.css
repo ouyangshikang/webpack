@@ -2,3 +2,8 @@ body {
     background: #efefef;
     color: #d234d2;
 }
+.avatar {
+    background-image: url(../img/avatar.jpg);
+    width: 500px;
+    height: 500px;
+}

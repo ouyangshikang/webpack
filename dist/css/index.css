@@ -1,0 +1,9 @@
+body {
+    background: #efefef;
+    color: #d234d2;
+}
+.avatar {
+    background-image: url(http://localhost:9090/bcf3aa6972358deea99919a1960f2306.jpg);
+    width: 200px;
+    height: 200px;
+}
