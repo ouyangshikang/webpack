@@ -1,2 +1,2 @@
 # webpack
-webpack3.x configuration
+webpack4.x learn demo & docs
